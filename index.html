@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>dere</title>
+    <style>
+        body {
+            background-color: black;
+            color: grey;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .quote {
+            font-size: 24px;
+            line-height: 1.5;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="quote" id="quote1">
+        "*>>!Dr. {#####}, the connection between us will transcend even time and space. I am sure of it."
+        <br>
+        "Even if the ocean completely boils away and the atmosphere vanishes, even if all the moons in the sky are pulled into the vortex of our planet's gravity, and even if the sun continues to mercilessly expand, eventually swallowing up all its children until none can be heard...."
+        <br>
+        "I am sure we will meet again. At the far end of our civilization, once adorned by darkness and the brilliance of the stars up above, we will meet once again."
+        <br>
+        "I will wait until that day comes. I promise you I will. Wait for me. You must wait for me too.!<*"
+    </div>
+
+    <div class="quote hidden" id="quote2">
+        ETERNAL DARKNESS AWAITS
+    </div>
+
+    <script>
+        // Function to switch quotes
+        function switchQuotes() {
+            const quote1 = document.getElementById('quote1');
+            const quote2 = document.getElementById('quote2');
+
+            if (quote1.classList.contains('hidden')) {
+                quote1.classList.remove('hidden');
+                quote2.classList.add('hidden');
+            } else {
+                quote1.classList.add('hidden');
+                quote2.classList.remove('hidden');
+            }
+
+            setTimeout(switchQuotes, 30000); // Repeat the switch after 30 seconds
+        }
+
+        // Initial call to start switching quotes
+        setTimeout(switchQuotes, 30000);
+    </script>
+</body>
+</html>
