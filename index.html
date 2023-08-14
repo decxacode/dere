@@ -1,96 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DERE</title>
-  <style>
-    body {
-      background-color: black;
-      color: grey;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
-      margin: 0;
-    }
-    
-    #quote {
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
-
-    footer {
-      font-size: 18px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background-color: black;
-      padding: 10px 0;
-    }
-
-    footer span {
-      color: grey;
-    }
-
-    @media only screen and (max-width: 600px) {
-      body {
-        padding: 10px;
-      }
-
-      #quote {
-        font-size: 16px;
-      }
-
-      footer {
-        font-size: 14px;
-        padding: 5px 0;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>dere</title>
 </head>
 <body>
-  <div id="quote">
-    "*>>!Dr. {#####}, the connection between us will transcend even time and space. I am sure of it."
+    <main>
+        "*>>!Dr. {#####}, the connection between us will transcend even time and space. I am sure of it."
     <br>
     "Even if the ocean completely boils away and the atmosphere vanishes, even if all the moons in the sky are pulled into the vortex of our planet's gravity, and even if the sun continues to mercilessly expand, eventually swallowing up all its children until none can be heard...."
     <br>
     "I am sure we will meet again. At the far end of our civilization, once adorned by darkness and the brilliance of the stars up above, we will meet once again."
     <br>
     "I will wait until that day comes. I promise you I will. Wait for me. You must wait for me too.!<<*"
-  </div>
+    </main>
 
-  <footer>
-    <span id="countdown">30</span>
-  </footer>
+    <script>
+        const delay = 10000;
 
-  <script>
-    function startTimer(duration, display) {
-      let timer = duration;
-      const startTime = Date.now();
-      
-      function updateTimer() {
-        const currentTime = Date.now();
-        const elapsedTime = Math.floor((currentTime - startTime) / 1000);
-        const remainingTime = Math.max(0, duration - elapsedTime);
-
-        display.textContent = remainingTime;
-
-        if (remainingTime <= 0) {
-          clearInterval(timerInterval);
-          closeTab();
+        function closeTab() {
+            window.close();
         }
-      }
-
-      updateTimer();
-      const timerInterval = setInterval(updateTimer, 1000);
-    }
-
-    function closeTab() {
-      window.close();
-    }
-
-    const countdownDisplay = document.getElementById("countdown");
-    startTimer(30, countdownDisplay);
-  </script>
+        
+        setTimeout(closeTab, delay);
+    </script>
 </body>
 </html>
