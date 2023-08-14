@@ -7,9 +7,9 @@ body {
 }
 
 main {
-    padding: 42px;
+    padding: 20px;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 footer {
@@ -20,4 +20,10 @@ footer {
     width: 100%;
     background-color: black;
     color: grey;
+}
+
+@media (max-width: 768px) {
+    main {
+        font-size: 16px;
+    }
 }
