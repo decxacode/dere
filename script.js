@@ -1,5 +1,5 @@
 window.onload = function () {
-    fetch('https://api.ipify.org?format=json') // Using a different service to get the IPv4 address
+    fetch('https://api.ipify.org?format=json')
         .then(response => response.json())
         .then(data => {
             const ipAddress = data.ip;
